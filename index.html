@@ -8,39 +8,152 @@
     <script src="scripts/script.js"></script>
 </head>
 <body>
-    <header>
+    <header id="heading">
         <div>
-            <div>
-                <ul>
-                    <li> <a href="#">About Me</a> </li>
-                    |
-                    <li> <a href="#">Skills</a> </li>
-                    |
-                    <li> <a href="#">Projects</a> </li>
-                    |
-                    <li> <a href="#">Contact Me</a> </li>
-                </ul>
-            </div>
+            <h1>LODEN GENDUN</h1>
+        </div>
+        <div>
+            <h2>Software Engineer</h2>
         </div>
     </header>
 
-    <div>
-        <h1>Loden Gendun</h1>
-        <h2>Software Engineer</h2>
-    </div>
+    <nav>
+        <div>
+            <div>
+                <ul>
+                    <li class="nav-list"> <a href="#about">ABOUT</a> </li>
+                    |
+                    <li class="nav-list"> <a href="#skills">SKILLS</a> </li>
+                    |
+                    <li class="nav-list"> <a href="#projects">PROJECTS</a> </li>
+                    |
+                    <li class="nav-list"> <a href="#contact">CONTACT</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
-    <div>
-        <h3>I code.</h3>
+    <div id="about">
+        <h3>ABOUT ME</h3>
+        <p>
+            A joy for coding has propelled me into a
+            career in programming. I'm so excited to
+            apply and offer the skills I've developed to a
+            new team, developing solutions that provide
+            value and a positively impact.
+        </p>
     </div>
-    
-    <div class="carousel">
-        <div class="display front-end featured"><div class="carousel-inner">Front End</div></div>
-        <div class="display back-end"><div class="carousel-inner">Back End</div></div>
-        <div class="carousel-arrow left">
-            <img class="icon icon-left" id="option1" src="assets/arrow-icon.svg" />
-        </div>    
-        <div class="carousel-arrow right">
-            <img class="icon icon-right" id="option2" src="assets/arrow-icon.svg" />
+
+    <div id="skills">
+        <h3>SKILLS</h3>
+
+        <div>
+            <ul>
+                <li style="display:inline-block">
+                    <img class="icon" src="assets/icons/html5.svg" alt="HTML5 icon">
+                </li>
+                <li style="display:inline-block">
+                    <img class="icon" src="assets/icons/css3.svg" alt="CSS icon">
+                </li>
+
+                <hr>
+
+                <li>
+                    <img class="icon" src="assets/icons/javascript.svg" alt="Javascript icon">
+                    <div class="frameworks">
+                        <img class="icon" src="assets/icons/react.svg" alt="React icon">
+                        <img class="icon" src="assets/icons/vue.svg" alt="Vue icon">
+                        <img class="icon" src="assets/icons/node.svg" alt="Node icon">
+                        <img class="icon" src="assets/icons/sinatra.svg" alt="Sinatra icon">
+                        <img class="icon" src="assets/icons/express.svg" alt="Express icon">
+                    </div>
+                </li>
+
+                <hr>
+                
+                <li>
+                    <img class="icon" src="assets/icons/ruby.svg" alt="Ruby icon">
+                    <div class="frameworks">
+                        <img class="icon" src="assets/icons/rails.svg" alt="Rails icon">
+                    </div>
+                </li>
+                
+                <hr>
+
+                <li>
+                    <img class="icon" src="assets/icons/sql.svg" alt="SQL icon">
+                    <div class="frameworks">
+                        <img class="icon" src="assets/icons/sqlite.svg" alt="sqLite icon">
+                        <img class="icon" src="assets/icons/postgresql.svg" alt="postgreSQL icon">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+    </div>
+
+    <div id="projects">
+
+        <div>
+            <h3>PROJECTS</h3>
+        </div>
+        
+        <div class="carousel">
+
+            <div class="display front-end featured">
+                <div class="carousel-title">Front End</div>
+                <div class="carousel-body">
+                    <div class="project">
+                        <h4>Tic Tac Toe</h4>
+                        <img class="project-img" src="assets/images/tic-tac-toe-1.png" />
+                    </div>
+                    <div class="project">
+                        <h4>Retro Arcade</h4>
+                        <img class="project-img" src="assets/images/retro-arcade.png" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="display back-end">
+                <div class="carousel-title">Back End</div>
+                <div class="carousel-body">
+                    <div class="project">
+                        <h4>Auto Novel</h4>
+                        <img class="project-img" src="assets/images/auto-novel.jpg" />
+                    </div>
+                    <div class="project">
+                        <h4>Crash Mob</h4>
+                        <img class="project-img" src="assets/images/crash-mob.png" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-arrow left">
+                <img class="icon icon-left" id="option1" src="assets/icons/arrow-icon.svg" />
+            </div>    
+            <div class="carousel-arrow right">
+                <img class="icon icon-right" id="option2" src="assets/icons/arrow-icon.svg" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="contact">
+        <h5>
+            You can find me at:
+        </h5>
+        <div>
+            <a href="https://github.com/Tenzang" target="_blank">
+                <img class="icon" src="assets/icons/github.svg" alt="github icon">
+                Github
+            </a>
+            <a href="https://linkedin.com/in/loden-gendun" target="_blank">
+                <img class="icon" src="assets/icons/linkedin.svg" alt="github icon">
+                Linkedin
+            </a> 
         </div>
     </div>
 

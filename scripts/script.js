@@ -13,12 +13,16 @@ function featureDiv(event) {
     const backEnd = document.querySelector('.back-end');
     const option = event.target.id;
 
-    frontEnd.classList.remove('featured');
+    let featured;
+    if (option === 'option1') {
+        backEnd.classList.remove('featured');
+        // backEnd.style.visibility= "hidden";
+        featured = frontEnd;
+    } else {
+        frontEnd.classList.remove('featured');
+        // frontEnd.style.visibility= "hidden";
+        featured = backEnd;
+    }
 
-    backEnd.classList.remove('featured');
-
-    (option === 'option1' ? frontEnd : backEnd
-    ).classList.add('featured');
-    console.log(option);
-    console.log(event.target);
+    featured.classList.add('featured');
 }
