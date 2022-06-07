@@ -1,1 +1,1 @@
-View my site [here]([https://tenzang.github.io/personal-website/]).
+View my site [here](https://tenzang.github.io/personal-website/).
