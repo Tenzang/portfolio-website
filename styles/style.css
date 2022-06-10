@@ -66,7 +66,7 @@ a {
 
 /*------------------- SECTIONS -----------------------*/
 #about, #skills, #contact {
-    padding: 0 10vw;
+    padding: 0 50px;
     margin: 50px 0;
 }
 
@@ -180,8 +180,10 @@ ul {
 }
 
 .carousel-body {
-    height: fit-content;
-    display: inline-block;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .carousel-arrow {
@@ -210,6 +212,7 @@ ul {
 
 h3 {
     text-align: center;
+    font-size: 1.5rem;
 }
 
 /* ------------ projects ---------------- */
@@ -233,6 +236,7 @@ h4 {
 #contact {
  text-align: center;
 }
+
 #contact div {
     display: flex;
     justify-content: space-around;
@@ -241,4 +245,17 @@ h4 {
 #contact a {
     color: black;
     font-weight: bold;
+}
+
+/*------------- MEDIA QUERIES (large screens) ------------------*/
+@media (min-width: 700px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 450px) {
+    h3 {
+        font-size: 2rem;
+    }
 }
