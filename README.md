@@ -5,4 +5,4 @@
 - 📫 How to reach me:
 https://www.linkedin.com/in/loden-gendun-5857b2202/
 
-You can view my portfolio site [here](https://tenzang.github.io/personal-website/).
+You can view my portfolio site [here](https://tenzang.github.io/portfolio-website/).
