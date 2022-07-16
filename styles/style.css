@@ -268,6 +268,18 @@ h4 {
     font-weight: bold;
 }
 
+/* floating toolbar */
+.toolbar {
+    position: fixed;
+    right: 2%;
+    top: 25px;
+    font-size: 72%;
+}
+
+.toolbar > * {
+    width: 40px;
+}
+
 /*------------- MEDIA QUERIES (large screens) ------------------*/
 @media (min-width: 700px) {
     h1 {
@@ -280,3 +292,4 @@ h4 {
         font-size: 2rem;
     }
 }
+2%
