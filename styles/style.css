@@ -80,14 +80,14 @@ a {
 
 /*------------------- SKILLS -------------------------*/
 .frameworks .icon {
-    width: 40px;
+    width: 65px;
 }
 
 .icon.language {
     width: 25px;
     height: 25px;
     margin-right: 0px;
-    margin-top: 19px;
+    margin-top: 17px;
 }
 
 ul {
@@ -101,17 +101,17 @@ ul {
     justify-content: space-evenly;
 }
 
-.skills {
-    text-align: center;
-}
-
-.skills h4, .language > * {
+#skills h4, .language > * {
     display: inline-block;
 }
 
 .language {
     display: flex;
     justify-content: center;
+}
+
+hr {
+    margin: 20px 0;
 }
 
 /*------------------ CAROUSEL ---------------------*/
@@ -164,7 +164,7 @@ ul {
     height: 100%;
 }
 
-.back-end img {
+.back-end .project-img {
     box-shadow: 0 0 20px;
 }
 
