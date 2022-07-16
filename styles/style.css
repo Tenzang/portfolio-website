@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Megrim&family=PT+Mono&family=Roboto+Mono&family=Share+Tech+Mono&display=swap');
-@import url('http://fonts.cdnfonts.com/css/garet');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 :root {
     --main-color: #16151A;
     --secondary-color: #FCFCFA;
@@ -15,8 +15,8 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Garet', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;
+        
     max-width: 1000px;
     margin: 0 auto;
     background-color: var(--main-color);
