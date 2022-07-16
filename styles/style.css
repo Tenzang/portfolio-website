@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Megrim&family=PT+Mono&family=Roboto+Mono&family=Share+Tech+Mono&display=swap');
 @import url('http://fonts.cdnfonts.com/css/garet');
 
+:root {
+    --main-color: #16151A;
+    --secondary-color: #FCFCFA;
+    --tertiary-color: #232227;
+    --fourth-color: #ababab;
+}
+
 * {
     border-style: border-box;
 }
@@ -12,7 +19,8 @@ body {
     
     max-width: 1000px;
     margin: 0 auto;
-    background-color: rgba(184, 184, 184, 0.438);
+    background-color: var(--main-color);
+    color: var(--secondary-color);
 }
 
 /*------------------- HEADER------------------- */
@@ -71,25 +79,39 @@ a {
 }
 
 /*------------------- SKILLS -------------------------*/
-.frameworks {
-    display: flex;
-    justify-content: space-around;
-}
-
-.frameworks {
-    margin: 25px;
-}
-
-#skills li {
-    margin: 25px;
-}
-
 .frameworks .icon {
     width: 40px;
 }
 
+.icon.language {
+    width: 25px;
+    height: 25px;
+    margin-right: 0px;
+    margin-top: 19px;
+}
+
 ul {
     list-style-type: none;
+    vertical-align: top;
+    padding: 0;
+}
+
+.frameworks {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills {
+    text-align: center;
+}
+
+.skills h4, .language > * {
+    display: inline-block;
+}
+
+.language {
+    display: flex;
+    justify-content: center;
 }
 
 /*------------------ CAROUSEL ---------------------*/
@@ -229,7 +251,7 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 /*---------- CONTACT ------------------*/
@@ -243,7 +265,6 @@ h4 {
 }
 
 #contact a {
-    color: black;
     font-weight: bold;
 }
 
