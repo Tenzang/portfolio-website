@@ -7,7 +7,7 @@ const langs = `\nLoden.languages = ["HTML", "CSS (Cascading Style Sheets)", "Jav
     const frameworks = `\nLoden.frameworks = ["Rails", "Sinatra", "React", "Vue", "Node.js", "Express.js"];`;
     const exp = `\nexport default Loden;`;
     const comment = `\n// contact details`;
-    const ending =`\nDo you wish to import module Loden? Y/n`;
+    const ending =`\nDo you wish to import module Loden?`;
 
     return (
         `\n`+

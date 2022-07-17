@@ -9,6 +9,14 @@ function slowType(node, string, typeRate = 125) {
             node.innerText = node.innerText + character;
         }, (index + 1) * typeRate);
     });
+    let yesNo = 'Y/n'.split('');
+    const endLink = document.querySelector('#contact-link');
+    yesNo.forEach((character, index) => {
+        setTimeout((c) => {
+            // sets innertext to array one character at a time at a rate of typeRate
+            endLink.innerText = endLink.innerText + character;
+        }, (index + array.length + 1) * typeRate);
+    });
 }
 
 function fakeType(node, char) {
@@ -37,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
         body.removeEventListener('keydown', handleKeyDown);
         skip.removeEventListener('click', skipToEnd);
         skip.removeAttribute('id');
-        fakeTypeDiv.classList.add('expanded');
+        document.querySelector('#code').classList.add('expanded');
         slowType(fakeTypeDiv, bio.join(''), 10);
     }
 

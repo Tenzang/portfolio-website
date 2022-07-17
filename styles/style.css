@@ -78,14 +78,19 @@ a {
 }
 
 /*-------------------  ABOUT -------------------*/
-.terminal {
+
+#code {
+    min-height: 82px;
+    transition: min-height 1s ease-out;
     font-family: 'Inconsolata', monospace;
-    min-height: 50px;
-    transition: min-height 5s;
 }
 
-.expanded {
-    min-height: 260px;
+#code.expanded {
+    min-height: 313px;
+}
+
+#contact-link {
+    text-decoration: underline;
 }
 
 #skip {
