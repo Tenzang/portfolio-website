@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Montserrat&family=PT+Mono&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Montserrat&family=PT+Mono&family=Share+Tech+Mono&family=Inconsolata&display=swap');
 
 :root {
     --main-color: #16151A;
@@ -75,6 +75,28 @@ a {
 #about, #skills, #contact {
     padding: 0 50px;
     margin: 50px 0;
+}
+
+/*-------------------  ABOUT -------------------*/
+.terminal {
+    font-family: 'Inconsolata', monospace;
+    min-height: 50px;
+    transition: min-height 5s;
+}
+
+.expanded {
+    min-height: 260px;
+}
+
+#skip {
+    text-decoration: underline;
+}
+
+.divider {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40%;
 }
 
 /*------------------- SKILLS -------------------------*/
