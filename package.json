@@ -1,0 +1,69 @@
+{
+    "name": "loden-gendun-portfolio",
+    "description": "A portfolio website for Loden Gendun",
+    "version": "0.1.0",
+    "homepage": "https://loden-gendun.com",
+    "author": {
+        "name": "Loden Gendun",
+        "email": "gendun.loden@gmail.com",
+        "url": "https://loden-gendun.com"
+    },
+    "keywords": [
+        "gatsby",
+        "gatsby-plugin",
+        "typescript",
+        "eslint",
+        "prettier",
+        "material-ui"
+    ],
+    "license": "(MIT OR 0BSD)",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "style": "npm run style:format && npm run style:lint",
+        "style:lint": "eslint ./src --cache --config ./.eslintrc.json",
+        "style:format": "prettier ./src --check --config ./.prettierrc",
+        "style:fix": "prettier ./src --write --config ./.prettierrc",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
+    "dependencies": {
+        "@material-ui/core": "^4.11.4",
+        "deepmerge": "^4.2.2",
+        "gatsby": "^3.4.2",
+        "gatsby-omni-font-loader": "^2.0.2",
+        "gatsby-plugin-layout": "^2.4.0",
+        "gatsby-plugin-material-ui": "^3.0.1",
+        "gatsby-plugin-offline": "^4.4.0",
+        "gatsby-plugin-react-helmet": "^4.4.0",
+        "gatsby-plugin-typescript": "^3.4.0",
+        "react": "^17.0.2",
+        "react-code-blocks": "^0.0.9-0",
+        "react-dom": "^17.0.2",
+        "react-helmet": "^6.1.0",
+        "react-icons": "^4.2.0",
+        "react-material-ui-carousel": "^2.3.11"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.5",
+        "@types/react-dom": "^17.0.3",
+        "@types/react-helmet": "^6.1.1",
+        "@typescript-eslint/eslint-plugin": "^4.22.1",
+        "@typescript-eslint/parser": "^4.22.1",
+        "eslint": "^7.26.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "prettier": "^2.2.1",
+        "typescript": "^4.2.4"
+    },
+    "resolutions": {
+        "postcss": "^8.2.12",
+        "cssnano": "^5.0.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Tenzang/portfolio-website/"
+    }
+}
