@@ -33,10 +33,7 @@ const makeTheme = (variant: ThemeOptions): Theme => {
                 fontSize: 25
             },
             h5: {
-                fontSize: 15,
-                '@media (max-width:450px)': {
-                    fontSize: 10
-                }
+                fontSize: 15
             }
         }
     };

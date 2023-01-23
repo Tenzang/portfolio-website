@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, ButtonGroup, Link, Typography } from '@material-ui/core';
+import { Box, Button, ButtonGroup, Link, styled, Typography } from '@material-ui/core';
 
 import { FC } from '../../util';
 
@@ -39,6 +39,12 @@ export const Navbar: FC = () => {
         bot: '5px'
     };
 
+    const NavTypography = styled(Typography)(({ theme }) => ({
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 9
+        }
+    }))
+
     return (
         <Box
             display="flex"
@@ -64,7 +70,7 @@ export const Navbar: FC = () => {
                     return (
                         <Button key={link.name}>
                             <Link href={link.url} underline="none" target={link.target || '_self'}>
-                                <Typography variant="h5">{link.name}</Typography>
+                                <NavTypography variant="h5">{link.name}</NavTypography>
                             </Link>
                         </Button>
                     );
