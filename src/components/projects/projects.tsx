@@ -4,7 +4,7 @@ import Carousel from 'react-material-ui-carousel';
 
 import { FC } from '../../util';
 import Showcase from './showcase';
-import { Projects as ProjectsProps } from "../../hooks/useSiteMetadata";
+import { Projects as ProjectsProps } from '../../hooks/useSiteMetadata';
 
 const Projects: FC<ProjectsProps> = ({ frontEnd, backEnd }) => {
     return (

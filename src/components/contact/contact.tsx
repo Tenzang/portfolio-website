@@ -4,7 +4,6 @@ import React from 'react';
 import { FC } from '../../util';
 import { Link as LinkType } from '../../hooks/useSiteMetadata';
 
-
 interface ContactProps {
     social: LinkType[];
 }

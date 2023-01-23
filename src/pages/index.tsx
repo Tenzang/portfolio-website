@@ -46,7 +46,7 @@ const IndexPage: FC = () => {
         <>
             {sections.map((section) => {
                 return (
-                    <Box component="section" my={5} id={section.id}>
+                    <Box component="section" my={5} id={section.id} key={section.id}>
                         <Typography variant="h2" align="center">
                             {section.title}
                         </Typography>
