@@ -21,7 +21,7 @@ const Contact: FC<ContactProps> = ({ social }) => {
             </Typography>
             <Box display="flex" justifyContent="space-evenly" pt={2}>
                 {social.map((icon) => (
-                    <Link href={icon.url} target="_blank">
+                    <Link href={icon.url} target="_blank" key={icon.name}>
                         <Container>
                             <img
                                 src={`/icons/${icon.img}.svg`}
