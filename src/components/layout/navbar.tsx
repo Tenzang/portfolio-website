@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Button, ButtonGroup, Link } from '@material-ui/core';
 import { FC } from '../../util';
 
-export const Navbar: FC<{}> = () => {
+export const Navbar: FC = () => {
     interface Link {
         name: string;
         url: string;

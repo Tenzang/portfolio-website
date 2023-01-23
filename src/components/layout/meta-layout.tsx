@@ -5,7 +5,7 @@ import Footer from './footer';
 
 import { FCR } from '../../util';
 
-const MetaLayout: FCR<{}> = (props) => {
+const MetaLayout: FCR = (props) => {
     return (
         <Container maxWidth="md">
             <Header />
