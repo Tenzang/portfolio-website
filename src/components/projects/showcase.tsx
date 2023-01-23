@@ -22,7 +22,7 @@ const Showcase: FC<ShowcaseProps> = ({ title, projects }) => {
             </Typography>
             <Typography align="center" variant="h3">
                 {projects.map((project) => (
-                    <Box mt={5}>
+                    <Box mt={5} key={project.name}>
                         <Container>
                             {project.name}
                             {project.status && (
@@ -33,7 +33,7 @@ const Showcase: FC<ShowcaseProps> = ({ title, projects }) => {
                         </Container>
                         <Box display="flex" justifyContent="center" my={4}>
                             {project.tools.map((tool) => (
-                                <Box mx={1.5}>
+                                <Box mx={1.5} key={tool.name}>
                                     <Tooltip title={tool.name}>
                                         <img
                                             src={`/icons/${tool.img}.svg`}
@@ -46,8 +46,8 @@ const Showcase: FC<ShowcaseProps> = ({ title, projects }) => {
                         <HTMLTooltip
                             title={
                                 <Typography align="center" variant="h6">
-                                    {project.description.split('\n').map((par) => (
-                                        <p>{par}</p>
+                                    {project.description.split('\n').map((par, i) => (
+                                        <p key={i}>{par}</p>
                                     ))}
                                 </Typography>
                             }
