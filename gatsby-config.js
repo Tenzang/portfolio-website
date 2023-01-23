@@ -232,18 +232,6 @@ module.exports = {
                     {
                         name: `Montserrat`,
                         file: `https://fonts.googleapis.com/css2?family=Montserrat&display=swap`
-                    },
-                    {
-                        name: `PT Mono`,
-                        file: `https://fonts.googleapis.com/css2?family=PT+Mono&display=swap`
-                    },
-                    {
-                        name: `Megrim`,
-                        file: `https://fonts.googleapis.com/css2?family=Megrim&display=swap`
-                    },
-                    {
-                        name: `Share Tech Mono`,
-                        file: `https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap`
                     }
                 ]
             }
