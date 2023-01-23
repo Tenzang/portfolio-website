@@ -17,16 +17,11 @@ const Floater: FC<LinkType> = ({ url, name, img }) => {
             target="_blank"
         >
             <Container>
-                <img
-                    src={`/icons/${img}.svg`}
-                    alt={`${name} icon`}
-                    width="40px"
-                />
+                <img src={`/icons/${img}.svg`} alt={`${name} icon`} width="40px" />
             </Container>
-            <Typography align='center'>{name}</Typography>
-        </Link >
+            <Typography align="center">{name}</Typography>
+        </Link>
     );
 };
 
 export default Floater;
-

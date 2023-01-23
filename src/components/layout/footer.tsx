@@ -15,7 +15,7 @@ const Footer: FC = () => {
             component="footer"
             p={1}
         >
-            <Typography align="center" variant='h5'>
+            <Typography align="center" variant="h5">
                 © {new Date().getFullYear()}, Built with
                 {` `}
                 <Link href="https://www.gatsbyjs.org" color="inherit">

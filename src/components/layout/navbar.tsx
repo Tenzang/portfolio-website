@@ -64,9 +64,7 @@ export const Navbar: FC = () => {
                     return (
                         <Button key={link.name}>
                             <Link href={link.url} underline="none" target={link.target || '_self'}>
-                                <Typography variant='h5'>
-                                    {link.name}
-                                </Typography>
+                                <Typography variant="h5">{link.name}</Typography>
                             </Link>
                         </Button>
                     );
