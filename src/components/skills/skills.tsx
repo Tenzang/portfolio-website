@@ -42,7 +42,7 @@ const Skills: FC<SkillsProps> = ({ languages }) => {
                         </Typography>
                         <Box display="flex" justifyContent="space-evenly" mt={spacing}>
                             {language.libraries.map((library) => (
-                                <Tooltip title={library.name}>
+                                <Tooltip title={library.name} key={library.name}>
                                     <img src={PATH + library.img + EXT} style={{ width: '65px' }} />
                                 </Tooltip>
                             ))}
