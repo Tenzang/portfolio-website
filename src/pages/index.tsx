@@ -4,6 +4,7 @@ import { AboutMe, Contact, Projects, Skills } from '../components/index';
 
 import { FC } from '../util';
 import useSiteMetadata from '../hooks/useSiteMetadata';
+import Floater from '../components/floater/floater';
 
 const IndexPage: FC = () => {
     const { author, languages, projects, social } = useSiteMetadata();
@@ -44,16 +45,19 @@ const IndexPage: FC = () => {
 
     return (
         <>
-            {sections.map((section) => {
-                return (
-                    <Box component="section" my={5} id={section.id} key={section.id}>
-                        <Typography variant="h2" align="center">
-                            {section.title}
-                        </Typography>
-                        <section.component {...section.props} />
-                    </Box>
-                );
-            })}
+            <Floater {...social[0]} />
+            {
+                sections.map((section) => {
+                    return (
+                        <Box component="section" my={5} id={section.id} key={section.id}>
+                            <Typography variant="h2" align="center">
+                                {section.title}
+                            </Typography>
+                            <section.component {...section.props} />
+                        </Box>
+                    );
+                })
+            }
         </>
     );
 };
