@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, ButtonGroup, Link } from '@material-ui/core';
+import { Box, Button, ButtonGroup, Link, Typography } from '@material-ui/core';
 
 import { FC } from '../../util';
 
@@ -64,7 +64,9 @@ export const Navbar: FC = () => {
                     return (
                         <Button key={link.name}>
                             <Link href={link.url} underline="none" target={link.target || '_self'}>
-                                {link.name}
+                                <Typography variant='h5'>
+                                    {link.name}
+                                </Typography>
                             </Link>
                         </Button>
                     );

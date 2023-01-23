@@ -31,6 +31,12 @@ const makeTheme = (variant: ThemeOptions): Theme => {
             },
             h4: {
                 fontSize: 25
+            },
+            h5: {
+                fontSize: 15,
+                '@media (max-width:450px)': {
+                    fontSize: 10
+                }
             }
         }
     };

@@ -248,5 +248,6 @@ module.exports = {
                 ]
             }
         }
-    ]
+    ],
+    pathPrefix: '/'
 };

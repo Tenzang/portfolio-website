@@ -27,7 +27,8 @@
         "style:lint": "eslint ./src --cache --config ./.eslintrc.json",
         "style:format": "prettier ./src --check --config ./.prettierrc",
         "style:fix": "prettier ./src --write --config ./.prettierrc",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+        "deploy": "gatsby build --prefix-paths && gh-pages -d public"
     },
     "dependencies": {
         "@material-ui/core": "^4.11.4",
@@ -55,6 +56,7 @@
         "eslint": "^7.26.0",
         "eslint-plugin-react": "^7.23.2",
         "eslint-plugin-react-hooks": "^4.2.0",
+        "gh-pages": "^5.0.0",
         "prettier": "^2.2.1",
         "typescript": "^4.2.4"
     },
