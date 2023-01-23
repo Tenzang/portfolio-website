@@ -1,49 +1,44 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
+export interface Author {
+    name: string;
+    about: string;
+    code: string;
+}
+
+interface Image {
+    name: string;
+    img: string;
+}
+
+export interface Link extends Image {
+    url: string;
+}
+
+export interface Language extends Image {
+    libraries: Image[];
+}
+
+export interface Project extends Link {
+    tools: Image[];
+    url: string;
+    status?: string;
+    description: string;
+    img: string;
+}
+
+export interface Projects {
+    backEnd: Project[];
+    frontEnd: Project[];
+}
+
 export interface SiteMetadata {
     title: string;
     description: string;
-    author: {
-        name: string;
-        content: string;
-        code: string;
-    };
-    languages: {
-        name: string;
-        img?: string;
-        libraries: {
-            name: string;
-            img: string;
-        }[];
-    }[];
-    projects: {
-        backend: {
-            name: string;
-            tools: {
-                name: string;
-                img: string;
-            }[];
-            img: string;
-            description: string;
-            url: string;
-            status?: string;
-        };
-        frontEnd: {
-            name: string;
-            tools: {
-                name: string;
-                img: string;
-            }[];
-            img: string;
-            description: string;
-            url: string;
-        };
-    };
-    social: {
-        name: string;
-        img: string;
-        url: string;
-    }[];
+    author: Author;
+    languages: Language[];
+    projects: Projects;
+    social: Link[];
 }
 
 export default (): SiteMetadata => {

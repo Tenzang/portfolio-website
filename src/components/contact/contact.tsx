@@ -2,15 +2,11 @@ import { Box, Container, Link, Typography } from '@material-ui/core';
 import React from 'react';
 
 import { FC } from '../../util';
+import { Link as LinkType } from '../../hooks/useSiteMetadata';
 
-interface Social {
-    name: string;
-    img: string;
-    url: string;
-}
 
 interface ContactProps {
-    social: Social[];
+    social: LinkType[];
 }
 
 const Contact: FC<ContactProps> = ({ social }) => {

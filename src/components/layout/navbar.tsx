@@ -1,15 +1,16 @@
 import React from 'react';
 import { Box, Button, ButtonGroup, Link } from '@material-ui/core';
+
 import { FC } from '../../util';
 
-export const Navbar: FC = () => {
-    interface Link {
-        name: string;
-        url: string;
-        target?: string;
-    }
+interface LinkType {
+    name: string;
+    url: string;
+    target?: string;
+}
 
-    const links: Link[] = [
+export const Navbar: FC = () => {
+    const links: LinkType[] = [
         {
             name: 'ABOUT',
             url: '#about'

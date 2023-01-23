@@ -1,6 +1,6 @@
 import { Box, Button, Container, Link, Tooltip, Typography, withStyles } from '@material-ui/core';
 import React, { FC } from 'react';
-import { Project } from './projects';
+import { Project } from '../../hooks/useSiteMetadata';
 
 interface ShowcaseProps {
     title: string;

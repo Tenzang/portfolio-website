@@ -1,18 +1,8 @@
 import { Box, Typography, Tooltip, Divider } from '@material-ui/core';
 import React from 'react';
+import { Language } from '../../hooks/useSiteMetadata';
 
 import { FC } from '../../util';
-
-interface Library {
-    name: string;
-    img: string;
-}
-
-interface Language {
-    name: string;
-    img: string;
-    libraries: Library[];
-}
 
 interface SkillsProps {
     languages: Language[];

@@ -8,14 +8,14 @@ import useSiteMetadata from '../hooks/useSiteMetadata';
 const IndexPage: FC = () => {
     const { author, languages, projects, social } = useSiteMetadata();
 
-    interface Section {
+    interface Section<T> {
         title: string;
-        component: FC<any>;
+        component: FC<T>;
         id: string;
-        props?: any;
+        props?: T;
     }
 
-    const sections: Section[] = [
+    const sections: Section<any>[] = [
         {
             title: 'About Me',
             component: AboutMe,
