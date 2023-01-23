@@ -14,8 +14,8 @@ const AboutMe: FC<Author> = ({ about, code }) => {
         <Container maxWidth="md">
             <FakeTyper code={code} />
             <Typography>
-                {about.split('\n').map((paragraph) => (
-                    <p>{paragraph}</p>
+                {about.split('\n').map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
                 ))}
             </Typography>
         </Container>

@@ -11,7 +11,10 @@ interface FakeTyperProps {
 const FakeTyper: FC<FakeTyperProps> = ({ code }) => {
     const [charCount, setCharCount] = useState(0);
     const introText = `// Start Typing...\n`;
-    const codeDisplayed = useMemo(() => introText + code.slice(0, charCount), [charCount]);
+    const codeDisplayed = useMemo(
+        () => introText + code.slice(0, charCount),
+        [charCount, code, introText]
+    );
 
     const _fakeType = () => {
         setCharCount(charCount + 1);
