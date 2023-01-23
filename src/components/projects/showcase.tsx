@@ -55,13 +55,14 @@ const Showcase: FC<ShowcaseProps> = ({ title, projects }) => {
                         >
                             <Link href={project.url} target="_blank">
                                 <img
-                                    src={'/images/' + project.img}
+                                    src={`/images/${project.img}.webp`}
                                     alt={`image of ${project.name}`}
                                     style={{
                                         width: '80%',
                                         borderRadius: 15,
                                         boxShadow: '0 0 15px white'
                                     }}
+                                    loading='lazy'
                                 />
                             </Link>
                         </HTMLTooltip>

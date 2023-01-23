@@ -127,7 +127,7 @@ module.exports = {
                             img: 'scss'
                         }
                     ],
-                    img: 'retro-arcade.png',
+                    img: 'retro-arcade',
                     description: `A web game application created by myself and Kristabel Wong for our fourth and final project at General Assembly. We chose a fun final project that could show off our skills in React, featuring Tetris, Snake, Space Invaders and Pong.`,
                     url: 'https://retro-arcade.netlify.app/'
                 },
@@ -147,7 +147,7 @@ module.exports = {
                             img: 'javascript'
                         }
                     ],
-                    img: 'tic-tac-toe.png',
+                    img: 'tic-tac-toe',
                     description: `The classic game of Tic-Tac-Toe built using good old HTML, CSS & Javascript. After completing player vs player functionality I went on to add computer opponents ranging three difficulty options.`,
                     url: 'https://tenzang.github.io/ideal-chainsaw/'
                 }
@@ -169,7 +169,7 @@ module.exports = {
                             img: 'jest'
                         }
                     ],
-                    img: 'coding-campfire.jpg',
+                    img: 'coding-campfire',
                     description: `A swiss army knife for Instructional Associates at General Assembly. Here, IA's can create and manage a schedule of daily coding exercises.`,
                     status: 'Work in Progress',
                     url: 'https://www.coding-campfire.com'
@@ -186,7 +186,7 @@ module.exports = {
                             img: 'bootstrap'
                         }
                     ],
-                    img: 'auto-novel.jpg',
+                    img: 'auto-novel',
                     description:
                         'A CRUD app with a twist! This project was my first foray into backend web development using Ruby on Rails. Developing Auto-Novel was a fun exercise in backend data-handling, as the "create novel" functionality is based on a crude random novel construction algorithm I designed.',
                     url: 'https://auto-novel.herokuapp.com/'
