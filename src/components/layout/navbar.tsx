@@ -61,7 +61,7 @@ export const Navbar: FC = () => {
             >
                 {links.map((link) => {
                     return (
-                        <Button>
+                        <Button key={link.name}>
                             <Link href={link.url} underline="none" target={link.target || '_self'}>
                                 {link.name}
                             </Link>
