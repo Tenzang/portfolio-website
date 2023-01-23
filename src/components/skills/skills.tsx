@@ -25,6 +25,7 @@ const Skills: FC<SkillsProps> = ({ languages }) => {
                                     <img
                                         src={PATH + language.img + EXT}
                                         style={{ width: '40px' }}
+                                        alt={`${language.name} icon`}
                                     />
                                 </Box>
                             )}

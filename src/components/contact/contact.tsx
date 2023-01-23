@@ -25,6 +25,7 @@ const Contact: FC<ContactProps> = ({ social }) => {
                                     display: 'block',
                                     margin: '0 auto'
                                 }}
+                                alt={`${icon.name} icon`}
                             />
                             <Typography align="center">{icon.name}</Typography>
                         </Container>
