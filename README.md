@@ -1,37 +1,25 @@
-# Gatsby's Typescript + Material-ui starter
+# Portolio Site
 
-Kick off your project with this [Material-ui](https://material-ui.com/) boilerplate (forked from [this](https://github.com/Junscuzzy/gatsby-material-typescript-starter) repository and edited with personal preferences). 
+## Description
 
-This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is the source code for my portfolio site where you can find out more about me and my projects.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+_Visit the site [here](loden-gendun.com)._
 
-## 🚀 Quick start
+## Lessons Learned
 
-1.  **Create a Gatsby site.**
+This site was originally written from scratch just using plain _HTML_, _CSS_ & _Javascript_ which was a good exercise but recently I decided to remake it using _Gatsby_. I love learning new skills and picking up new tools, and the site had a lot of repeated elements so it was a good idea to redesign my portfolio in a way that would allow me to quickly and easily expand it.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+Overall I've really enjoyed the Gatsby development experience.
 
-    ```shell
-    # create a new Gatsby site using the starter
-    gatsby new gatsby-material-typescript-starter https://github.com/Lindeneg/gatsby-material-typescript-starter
-    ```
+## Acknowledgements
 
-1.  **Start developing.**
+Special shoutout to [Lindenegs gatsby-material-typescript-starter](https://github.com/Lindeneg/gatsby-material-typescript-starter) for helping me to overcome the dependency conflict hell I was in and dive right into building this site.
 
-    Navigate into your new site’s directory and start it up.
+---
 
-    ```shell
-    cd gatsby-material-typescript-starter/
-    yarn develop
-    ```
+[![site preview](/static/images/site-preview.webp)](loden-gendun.com)
 
-1.  **Open the source code and start editing!**
+---
 
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `gatsby-material-typescript-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
-
-All the commands are in your `package.json > scripts`.
+:cocktail: :weary: :pinched_finger:
