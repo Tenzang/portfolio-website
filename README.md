@@ -22,4 +22,4 @@ Special shoutout to [Lindenegs gatsby-material-typescript-starter](https://githu
 
 ---
 
-:cocktail: :weary: :pinched_finger:
+:cocktail: :weary: :pinched_fingers:
