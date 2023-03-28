@@ -108,26 +108,6 @@ module.exports = {
         projects: {
             frontEnd: [
                 {
-                    name: 'This site!',
-                    tools: [
-                        {
-                            name: 'NodeJS',
-                            img: 'node'
-                        },
-                        {
-                            name: 'Gatsby',
-                            img: 'gatsby'
-                        },
-                        {
-                            name: 'GraphQL',
-                            img: 'graphql'
-                        }
-                    ],
-                    img: 'portfolio-site',
-                    description: "Originally, this website was created using basic HTML, CSS, and Javascript. However, I later migrated it to Gatsby to improve its search engine optimization and take advantage of the benefits of reusable React components.",
-                    url: 'https://loden-gendun.com/'
-                },
-                {
                     name: 'Retro Arcade',
                     tools: [
                         {
@@ -166,6 +146,27 @@ module.exports = {
                     img: 'tic-tac-toe',
                     description: `The classic game of Tic-Tac-Toe built using good old HTML, CSS & Javascript. After completing player vs player functionality I went on to add computer opponents ranging three difficulty options.`,
                     url: 'https://tenzang.github.io/ideal-chainsaw/'
+                },
+                {
+                    name: 'This site!',
+                    tools: [
+                        {
+                            name: 'NodeJS',
+                            img: 'node'
+                        },
+                        {
+                            name: 'Gatsby',
+                            img: 'gatsby'
+                        },
+                        {
+                            name: 'GraphQL',
+                            img: 'graphql'
+                        }
+                    ],
+                    img: 'portfolio-site',
+                    description:
+                        'Originally, this website was created using basic HTML, CSS, and Javascript. However, I later migrated it to Gatsby to improve its search engine optimization and take advantage of the benefits of reusable React components.',
+                    url: 'https://loden-gendun.com/'
                 }
             ],
             backEnd: [
