@@ -19,6 +19,7 @@ const Projects: FC<ProjectsProps> = ({ frontEnd, backEnd }) => {
                 animation="slide"
                 navButtonsAlwaysVisible
                 indicators={false}
+                interval={10000}
             >
                 <Showcase title="Front End" projects={frontEnd} />
                 <Showcase title="Back End" projects={backEnd} />
