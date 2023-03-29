@@ -165,7 +165,7 @@ module.exports = {
                     ],
                     img: 'portfolio-site',
                     description:
-                        'Originally, this website was created using basic HTML, CSS, and Javascript. However, I later migrated it to Gatsby to improve its search engine optimization and take advantage of the benefits of reusable React components.',
+                        'Originally, this website was created using basic HTML, CSS, and Javascript. However, I later migrated it to Gatsby to take advantage of the benefits of reusable React components whilst preserving search engine optimization.',
                     url: 'https://loden-gendun.com/'
                 }
             ],
