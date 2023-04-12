@@ -67,6 +67,9 @@ const SEO: FC<SEOProps> = (props) => {
                     content: `website`
                 }
             ].concat(props.meta || [])}
+            bodyAttributes={{
+                class: 'bg-light-primary dark:bg-dark-primary text-light-highlight dark:text-dark-highlight'
+            }}
         />
     );
 };
