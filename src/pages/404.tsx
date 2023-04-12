@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Container } from '@material-ui/core';
 import { Theme, makeStyles } from '@material-ui/core/styles';
 
 import { Seo } from '../components';
 import { FC } from '../util';
+import { navigate } from 'gatsby';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
@@ -13,6 +14,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const NotFoundPage: FC = () => {
+    useEffect(() => {
+        navigate('/');
+    }, []);
+
     const styles = useStyles();
     return (
         <Container maxWidth="md" className={styles.root}>
