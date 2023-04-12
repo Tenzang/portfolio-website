@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, ButtonGroup, Link, styled, Typography } from '@material-ui/core';
+import { Link } from 'gatsby';
 
 import { FC } from '../../util';
 
@@ -12,70 +12,48 @@ interface LinkType {
 export const Navbar: FC = () => {
     const links: LinkType[] = [
         {
-            name: 'ABOUT',
+            name: 'About',
             url: '#about'
         },
         {
-            name: 'SKILLS',
+            name: 'Skills',
             url: '#skills'
         },
         {
-            name: 'PROJECTS',
+            name: 'Projects',
             url: '#projects'
         },
         {
-            name: 'CONTACT',
+            name: 'Contact',
             url: '#contact'
         },
         {
-            name: 'RESUME',
+            name: 'Resume',
             url: '/resume.pdf',
             target: '_blank'
         }
     ];
 
-    const RADIUS = {
-        top: '25px',
-        bot: '5px'
-    };
-
-    const NavTypography = styled(Typography)(({ theme }) => ({
-        [theme.breakpoints.down('xs')]: {
-            fontSize: 9
-        }
-    }))
-
     return (
-        <Box
-            display="flex"
-            justifyContent="center"
-            style={{
-                borderTopLeftRadius: RADIUS.top,
-                borderTopRightRadius: RADIUS.top,
-                borderBottomLeftRadius: RADIUS.bot,
-                borderBottomRightRadius: RADIUS.bot
-            }}
-            bgcolor="background.paper"
-            component="nav"
-            p={1.5}
-            mt={4}
+        <nav
+            className="sm:bg-light-secondary sm:dark:bg-dark-secondary rounded-t-lg"
+            aria-label="Navigation Menu"
         >
-            <ButtonGroup
-                color="primary"
-                disableRipple
-                variant="text"
-                aria-label="text button group"
-            >
+            <ul className="flex justify-evenly" aria-label="Page Sections">
                 {links.map((link) => {
                     return (
-                        <Button key={link.name}>
-                            <Link href={link.url} underline="none" target={link.target || '_self'}>
-                                <NavTypography variant="h5">{link.name}</NavTypography>
+                        <li className="flex flex-auto bg-light-secondary hover:bg-light-highlight dark:hover:bg-dark-highlight sm:bg-transparent first:rounded-tl-lg last:rounded-tr-lg">
+                            <Link
+                                className="flex-1 py-2 uppercase  focus-visible:bg-light-highlight dark:focus-visible:bg-dark-highlight hover:text-light-primary focus-visible:text-light-primary dark:hover:text-dark-primary dark:focus-visible:text-dark-primary transition"
+                                to={link.url}
+                                target={link.target || '_self'}
+                            >
+                                {link.name}
                             </Link>
-                        </Button>
+                        </li>
                     );
                 })}
-            </ButtonGroup>
-        </Box>
+            </ul>
+        </nav>
     );
 };
