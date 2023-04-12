@@ -36,13 +36,13 @@ export const Navbar: FC = () => {
 
     return (
         <nav
-            className="sm:bg-light-secondary sm:dark:bg-dark-secondary rounded-t-lg"
+            className="sm:bg-light-secondary sm:dark:bg-dark-secondary rounded-t-2xl"
             aria-label="Navigation Menu"
         >
             <ul className="flex justify-evenly" aria-label="Page Sections">
                 {links.map((link) => {
                     return (
-                        <li className="flex flex-auto bg-light-secondary hover:bg-light-highlight dark:hover:bg-dark-highlight sm:bg-transparent first:rounded-tl-lg last:rounded-tr-lg">
+                        <li className="flex flex-auto bg-light-secondary hover:bg-light-highlight dark:hover:bg-dark-highlight sm:bg-transparent first:rounded-tl-2xl last:rounded-tr-2xl">
                             <Link
                                 className="flex-1 py-2 uppercase  focus-visible:bg-light-highlight dark:focus-visible:bg-dark-highlight hover:text-light-primary focus-visible:text-light-primary dark:hover:text-dark-primary dark:focus-visible:text-dark-primary transition"
                                 to={link.url}
