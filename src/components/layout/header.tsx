@@ -1,20 +1,15 @@
 import React from 'react';
-import { Typography, Box } from '@material-ui/core';
 import { Navbar } from './navbar';
 
 import { FC } from '../../util';
 
 const Header: FC = () => {
     return (
-        <Box mt={4} component="header">
-            <Typography align="center" variant="h1">
-                LODEN GENDUN
-            </Typography>
-            <Typography align="center" variant="h3" gutterBottom>
-                Software Engineer
-            </Typography>
+        <header className="mt-6 text-center flex flex-col">
+            <h1 className="uppercase text-5xl">Loden Gendun</h1>
+            <h2 className="text-2xl mt-4 mb-6">Software Engineer</h2>
             <Navbar />
-        </Box>
+        </header>
     );
 };
 
