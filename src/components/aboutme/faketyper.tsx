@@ -1,5 +1,4 @@
 import { CodeBlock, hybrid } from 'react-code-blocks';
-import { Box } from '@material-ui/core';
 import React, { useMemo, useState } from 'react';
 
 import { FC } from '../../util';
@@ -21,7 +20,7 @@ const FakeTyper: FC<FakeTyperProps> = ({ code }) => {
     };
 
     return (
-        <Box maxWidth="md" onKeyDown={_fakeType} tabIndex={0} my={3}>
+        <div tabIndex={0} onKeyDown={_fakeType} className="my-4 hidden sm:block">
             <CodeBlock
                 text={codeDisplayed}
                 language="javascript"
@@ -29,7 +28,7 @@ const FakeTyper: FC<FakeTyperProps> = ({ code }) => {
                 wrapLines
                 showLineNumbers={false}
             />
-        </Box>
+        </div>
     );
 };
 
