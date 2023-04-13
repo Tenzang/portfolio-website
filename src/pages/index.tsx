@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
 import { AboutMe, Contact, Projects, Skills } from '../components/index';
 
 import { FC } from '../util';
@@ -44,19 +43,19 @@ const IndexPage: FC = () => {
     ];
 
     return (
-        <>
+        <main>
             <Floater {...social[0]} />
             {sections.map((section) => {
                 return (
-                    <Box component="section" my={5} id={section.id} key={section.id}>
-                        <Typography variant="h2" align="center">
+                    <section aria-labelledby={`${section.id}-section-label`}>
+                        <h3 className="text-center text-2xl" id={`${section.id}-section-label`}>
                             {section.title}
-                        </Typography>
+                        </h3>
                         <section.component {...section.props} />
-                    </Box>
+                    </section>
                 );
             })}
-        </>
+        </main>
     );
 };
 
