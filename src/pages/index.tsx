@@ -43,19 +43,27 @@ const IndexPage: FC = () => {
     ];
 
     return (
-        <main>
-            <Floater {...social[0]} />
-            {sections.map((section) => {
-                return (
-                    <section aria-labelledby={`${section.id}-section-label`}>
-                        <h3 className="text-center text-2xl" id={`${section.id}-section-label`}>
-                            {section.title}
-                        </h3>
-                        <section.component {...section.props} />
-                    </section>
-                );
-            })}
-        </main>
+        <>
+            <aside>
+                <Floater {...social[0]} />
+            </aside>
+            <main className="divide-y-2 divide-light-highlight/10 dark:divide-dark-highlight/10">
+                {sections.map((section) => {
+                    return (
+                        <section
+                            aria-labelledby={`${section.id}-section-label`}
+                            className="py-5"
+                            id={section.id}
+                        >
+                            <h3 className="text-center text-3xl" id={`${section.id}-section-label`}>
+                                {section.title}
+                            </h3>
+                            <section.component {...section.props} />
+                        </section>
+                    );
+                })}
+            </main>
+        </>
     );
 };
 
