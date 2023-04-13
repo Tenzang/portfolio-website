@@ -1,4 +1,4 @@
-import { CodeBlock, hybrid } from 'react-code-blocks';
+import { CodeBlock, hybrid, paraisoLight } from 'react-code-blocks';
 import React, { useMemo, useState } from 'react';
 
 import { FC } from '../../util';
@@ -19,14 +19,16 @@ const FakeTyper: FC<FakeTyperProps> = ({ code }) => {
         setCharCount(charCount + 1);
     };
 
+    const lightMode = matchMedia('(prefers-color-scheme: light)').matches;
+
     return (
         <div tabIndex={0} onKeyDown={_fakeType} className="my-4 hidden sm:block">
             <CodeBlock
                 text={codeDisplayed}
                 language="javascript"
-                theme={hybrid}
-                wrapLines
+                theme={lightMode ? paraisoLight : hybrid}
                 showLineNumbers={false}
+                wrapLongLines
             />
         </div>
     );
