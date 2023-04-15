@@ -8,7 +8,9 @@ const MetaLayout: FCR = (props) => {
     return (
         <>
             <Header />
-            <main className="font-Montserrat">{props.children}</main>
+            <main className="font-Montserrat divide-y-2 divide-light-highlight/10 dark:divide-dark-highlight/10">
+                {props.children}
+            </main>
             <Footer />
         </>
     );
