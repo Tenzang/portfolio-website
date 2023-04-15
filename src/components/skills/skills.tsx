@@ -18,14 +18,25 @@ const Skills: FC<SkillsProps> = ({ languages }) => {
                 <section className="py-10">
                     <header className="flex justify-center space-x-4">
                         {language.img && (
-                            <img src={PATH + language.img + EXT} alt="" aria-hidden width={30} />
+                            <img
+                                src={PATH + language.img + EXT}
+                                alt=""
+                                aria-hidden
+                                width={30}
+                                className="invert dark:filter-none"
+                            />
                         )}
                         <h4 className="text-2xl text-center">{language.name}</h4>
                     </header>
                     <div className="flex justify-evenly mt-5">
                         {language.libraries.map((library) => (
                             <Tooltip title={library.name} key={library.name}>
-                                <img src={PATH + library.img + EXT} width={60} alt={library.name} />
+                                <img
+                                    src={PATH + library.img + EXT}
+                                    width={60}
+                                    alt={library.name}
+                                    className="invert dark:filter-none"
+                                />
                             </Tooltip>
                         ))}
                     </div>
