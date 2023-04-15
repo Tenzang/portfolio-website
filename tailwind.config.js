@@ -10,6 +10,10 @@ module.exports = {
                 'light-primary': 'white',
                 'light-secondary': '#94A3B8',
                 'light-highlight': '#16151A'
+            },
+            dropShadow: {
+                light: '0 0 15px black',
+                dark: '0 0 5px white'
             }
         }
     },
