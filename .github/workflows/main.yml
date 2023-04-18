@@ -14,3 +14,4 @@ jobs:
               with:
                   build: npm run build
                   start: npm start
+                  wait-on: '127.0.0.1:8000'
