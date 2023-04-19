@@ -1,0 +1,21 @@
+.swiper-button-next, .swiper-button-prev {
+    background-image: url(/icons/arrow-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    top: 3.5em;
+}
+
+.swiper-button-prev {
+    transform: rotate(180deg);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    display: none;
+}
+  
+@media (prefers-color-scheme: dark) {
+    .swiper-button-next, .swiper-button-prev {
+        filter: invert(1);
+    }
+}

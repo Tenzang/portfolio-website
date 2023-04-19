@@ -1,5 +1,9 @@
 import React from 'react';
-import Carousel from 'react-material-ui-carousel';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import './swiper-custom.css';
 
 import { FC } from '../../util';
 import Showcase from './showcase';
@@ -7,21 +11,23 @@ import { Projects as ProjectsProps } from '../../hooks/useSiteMetadata';
 
 const Projects: FC<ProjectsProps> = ({ frontEnd, backEnd }) => {
     return (
-        <Carousel
-            navButtonsWrapperProps={{
-                style: {
-                    top: '50px',
-                    height: '0px'
-                }
+        <Swiper
+            modules={[Autoplay, Navigation]}
+            navigation
+            slidesPerView={1}
+            autoplay={{
+                delay: 10000,
+                disableOnInteraction: true
             }}
-            animation="slide"
-            navButtonsAlwaysVisible
-            indicators={false}
-            interval={10000}
+            className="mySwiper"
         >
-            <Showcase title="Front End" projects={frontEnd} />
-            <Showcase title="Back End" projects={backEnd} />
-        </Carousel>
+            <SwiperSlide>
+                <Showcase title="Front End" projects={frontEnd} />
+            </SwiperSlide>
+            <SwiperSlide>
+                <Showcase title="Back End" projects={backEnd} />
+            </SwiperSlide>
+        </Swiper>
     );
 };
 
