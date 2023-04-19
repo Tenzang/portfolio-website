@@ -1,48 +1,51 @@
-import { Box, Typography, Tooltip, Divider } from '@material-ui/core';
 import React from 'react';
+import { Tooltip } from 'react-tooltip';
 import { Language } from '../../hooks/useSiteMetadata';
 
-import { FC } from '../../util';
+import type { FC } from '../../util';
 
 interface SkillsProps {
     languages: Language[];
 }
 
 const Skills: FC<SkillsProps> = ({ languages }) => {
-    const spacing = 5;
-
     const EXT = '.svg';
     const PATH = '/icons/';
 
     return (
-        <>
+        <div className="divide-y-2 divide-dotted divide-light-highlight/20 dark:divide-dark-highlight/20">
             {languages.map((language) => (
-                <>
-                    <Box my={spacing}>
-                        <Typography variant="h3" align="center">
-                            {language.img && (
-                                <Box component="span" mr={5}>
-                                    <img
-                                        src={PATH + language.img + EXT}
-                                        style={{ width: '40px' }}
-                                        alt={`${language.name} icon`}
-                                    />
-                                </Box>
-                            )}
-                            {language.name}
-                        </Typography>
-                        <Box display="flex" justifyContent="space-evenly" mt={spacing}>
-                            {language.libraries.map((library) => (
-                                <Tooltip title={library.name} key={library.name}>
-                                    <img src={PATH + library.img + EXT} style={{ width: '65px' }} />
-                                </Tooltip>
-                            ))}
-                        </Box>
-                    </Box>
-                    <Divider />
-                </>
+                <section className="py-10">
+                    <header className="flex justify-center space-x-4">
+                        {language.img && (
+                            <img
+                                src={PATH + language.img + EXT}
+                                alt=""
+                                aria-hidden
+                                width={30}
+                                className="invert dark:filter-none"
+                            />
+                        )}
+                        <h4 className="text-2xl text-center">{language.name}</h4>
+                    </header>
+                    <ul aria-label={language.name + ' tools'} className="flex justify-evenly mt-5">
+                        {language.libraries.map((library) => (
+                            <li key={library.name} className="flex">
+                                <img
+                                    src={PATH + library.img + EXT}
+                                    width={60}
+                                    alt={library.name}
+                                    data-tooltip-id={library.name}
+                                    data-tooltip-content={library.name}
+                                    className="invert dark:filter-none"
+                                />
+                                <Tooltip id={library.name} />
+                            </li>
+                        ))}
+                    </ul>
+                </section>
             ))}
-        </>
+        </div>
     );
 };
 

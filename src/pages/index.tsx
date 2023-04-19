@@ -1,12 +1,10 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
 import { AboutMe, Contact, Projects, Skills } from '../components/index';
 
 import { FC } from '../util';
 import useSiteMetadata from '../hooks/useSiteMetadata';
-import Floater from '../components/floater/floater';
 
-const IndexPage: FC = () => {
+const IndexPage = () => {
     const { author, languages, projects, social } = useSiteMetadata();
 
     interface Section<T> {
@@ -43,21 +41,14 @@ const IndexPage: FC = () => {
         }
     ];
 
-    return (
-        <>
-            <Floater {...social[0]} />
-            {sections.map((section) => {
-                return (
-                    <Box component="section" my={5} id={section.id} key={section.id}>
-                        <Typography variant="h2" align="center">
-                            {section.title}
-                        </Typography>
-                        <section.component {...section.props} />
-                    </Box>
-                );
-            })}
-        </>
-    );
+    return sections.map((section) => (
+        <section aria-labelledby={`${section.id}-section-label`} className="py-10" id={section.id}>
+            <h3 className="text-center text-3xl" id={`${section.id}-section-label`}>
+                {section.title}
+            </h3>
+            <section.component {...section.props} />
+        </section>
+    ));
 };
 
 export default IndexPage;

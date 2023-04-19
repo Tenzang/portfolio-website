@@ -1,20 +1,24 @@
 import React from 'react';
-import { Typography, Box } from '@material-ui/core';
 import { Navbar } from './navbar';
+import ContentSkipper from '../contentskipper';
 
 import { FC } from '../../util';
+import Floater from '../floater/floater';
+import useSiteMetadata from '../../hooks/useSiteMetadata';
 
 const Header: FC = () => {
+    const { social } = useSiteMetadata();
+
     return (
-        <Box mt={4} component="header">
-            <Typography align="center" variant="h1">
-                LODEN GENDUN
-            </Typography>
-            <Typography align="center" variant="h3" gutterBottom>
-                Software Engineer
-            </Typography>
+        <header className="mt-6 text-center flex flex-col">
+            <ContentSkipper />
+            <h1 className="uppercase text-5xl">Loden Gendun</h1>
+            <h2 className="text-2xl mt-4 mb-6">Software Engineer</h2>
             <Navbar />
-        </Box>
+            <aside>
+                <Floater {...social[0]} />
+            </aside>
+        </header>
     );
 };
 

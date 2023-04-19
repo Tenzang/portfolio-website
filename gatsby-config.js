@@ -63,12 +63,12 @@ module.exports = {
                         img: 'vue'
                     },
                     {
-                        name: 'Node',
-                        img: 'node'
-                    },
-                    {
                         name: 'Express',
                         img: 'express'
+                    },
+                    {
+                        name: 'Node',
+                        img: 'node'
                     }
                 ]
             },
@@ -231,9 +231,7 @@ module.exports = {
     plugins: [
         `gatsby-plugin-typescript`,
         `gatsby-plugin-react-helmet`,
-        {
-            resolve: 'gatsby-plugin-material-ui'
-        },
+        'gatsby-plugin-postcss',
         {
             resolve: `gatsby-plugin-layout`,
             options: {

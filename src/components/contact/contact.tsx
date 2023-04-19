@@ -1,8 +1,8 @@
-import { Box, Container, Link, Typography } from '@material-ui/core';
 import React from 'react';
 
 import { FC } from '../../util';
 import { Link as LinkType } from '../../hooks/useSiteMetadata';
+import { Link } from 'gatsby';
 
 interface ContactProps {
     social: LinkType[];
@@ -10,29 +10,25 @@ interface ContactProps {
 
 const Contact: FC<ContactProps> = ({ social }) => {
     return (
-        <Box display="flex" flexDirection="column">
-            <Typography variant="h5" align="center">
-                <p>You can find me at:</p>
-            </Typography>
-            <Box display="flex" justifyContent="space-evenly" pt={2}>
+        <div className="text-center flex flex-col gap-6">
+            <p>You can find me at:</p>
+            <ul aria-label="Social links" className="flex justify-center gap-10">
                 {social.map((icon) => (
-                    <Link href={icon.url} target="_blank" key={icon.name}>
-                        <Container>
+                    <li>
+                        <Link to={icon.url} target="_blank" key={icon.name}>
                             <img
                                 src={`/icons/${icon.img}.svg`}
-                                style={{
-                                    width: '50px',
-                                    display: 'block',
-                                    margin: '0 auto'
-                                }}
-                                alt={`${icon.name} icon`}
+                                width={50}
+                                alt=""
+                                aria-hidden
+                                className="mx-auto invert dark:filter-none"
                             />
-                            <Typography align="center">{icon.name}</Typography>
-                        </Container>
-                    </Link>
+                            {icon.name}
+                        </Link>
+                    </li>
                 ))}
-            </Box>
-        </Box>
+            </ul>
+        </div>
     );
 };
 

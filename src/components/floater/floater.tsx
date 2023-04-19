@@ -1,25 +1,20 @@
 import React from 'react';
-import { Container, Link, Typography } from '@material-ui/core';
 
 import { FC } from '../../util';
 import { Link as LinkType } from '../../hooks/useSiteMetadata';
+import { Link } from 'gatsby';
 
 const Floater: FC<LinkType> = ({ url, name, img }) => {
     return (
-        <Link
-            href={url}
-            style={{
-                position: 'fixed',
-                right: '2%',
-                top: '25px',
-                fontSize: '72%'
-            }}
-            target="_blank"
-        >
-            <Container>
-                <img src={`/icons/${img}.svg`} alt={`${name} icon`} width="40px" />
-            </Container>
-            <Typography align="center">{name}</Typography>
+        <Link to={url} className="fixed right-5 top-5 text-sm" target="_blank">
+            <img
+                src={`/icons/${img}.svg`}
+                alt=""
+                width="40px"
+                aria-hidden
+                className="mx-auto invert dark:filter-none"
+            />
+            {name}
         </Link>
     );
 };

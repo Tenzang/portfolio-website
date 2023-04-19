@@ -9,6 +9,23 @@ describe('My First Test', () => {
         cy.contains(/loden gendun/i);
     });
 
+    describe('Content Skipper', () => {
+        let contentSkipper;
+
+        beforeEach(() => {
+            contentSkipper = cy.get('#content-skipper');
+        });
+
+        it('is hidden at first', () => {
+            contentSkipper.should('not.be.visible');
+        });
+
+        it('is revealed on focus', () => {
+            contentSkipper.focus();
+            contentSkipper.should('be.visible');
+        });
+    });
+
     describe('Nav Bar', () => {
         let nav;
 

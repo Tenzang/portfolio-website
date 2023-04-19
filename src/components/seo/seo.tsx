@@ -45,7 +45,8 @@ const SEO: FC<SEOProps> = (props) => {
     return (
         <Helmet
             htmlAttributes={{
-                lang: props.lang || 'en'
+                lang: props.lang || 'en',
+                class: 'dark'
             }}
             title={props.title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -67,6 +68,9 @@ const SEO: FC<SEOProps> = (props) => {
                     content: `website`
                 }
             ].concat(props.meta || [])}
+            bodyAttributes={{
+                class: 'm-auto px-3 md:w-[48rem] bg-light-primary dark:bg-dark-primary text-light-highlight dark:text-dark-highlight'
+            }}
         />
     );
 };
