@@ -4,12 +4,16 @@ import Footer from './footer';
 
 import { FCR } from '../../util';
 
-const MetaLayout: FCR = (props) => {
+const MetaLayout: FCR = ({ children }) => {
     return (
         <>
             <Header />
-            <main className="font-Montserrat divide-y-2 divide-light-highlight/10 dark:divide-dark-highlight/10">
-                {props.children}
+            <main
+                id="main"
+                tabIndex={-1}
+                className="font-Montserrat divide-y-2 divide-light-highlight/10 dark:divide-dark-highlight/10"
+            >
+                {children}
             </main>
             <Footer />
         </>
