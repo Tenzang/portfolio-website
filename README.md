@@ -12,10 +12,6 @@ This site was originally written from scratch just using plain _HTML_, _CSS_ & _
 
 Overall I've really enjoyed the Gatsby development experience.
 
-## Acknowledgements
-
-Special shoutout to [Lindenegs gatsby-material-typescript-starter](https://github.com/Lindeneg/gatsby-material-typescript-starter) for helping me to overcome the dependency conflict hell I was in and dive right into building this site.
-
 ---
 
 [![site preview](/static/images/site-preview.webp)](loden-gendun.com)

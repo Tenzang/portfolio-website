@@ -1,8 +1,8 @@
-import { Tooltip } from '@material-ui/core';
 import React from 'react';
+import { Tooltip } from 'react-tooltip';
 import { Language } from '../../hooks/useSiteMetadata';
 
-import { FC } from '../../util';
+import type { FC } from '../../util';
 
 interface SkillsProps {
     languages: Language[];
@@ -28,18 +28,21 @@ const Skills: FC<SkillsProps> = ({ languages }) => {
                         )}
                         <h4 className="text-2xl text-center">{language.name}</h4>
                     </header>
-                    <div className="flex justify-evenly mt-5">
+                    <ul aria-label={language.name + ' tools'} className="flex justify-evenly mt-5">
                         {language.libraries.map((library) => (
-                            <Tooltip title={library.name} key={library.name}>
+                            <li key={library.name} className="flex">
                                 <img
                                     src={PATH + library.img + EXT}
                                     width={60}
                                     alt={library.name}
+                                    data-tooltip-id={library.name}
+                                    data-tooltip-content={library.name}
                                     className="invert dark:filter-none"
                                 />
-                            </Tooltip>
+                                <Tooltip id={library.name} />
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </section>
             ))}
         </div>
