@@ -35,6 +35,7 @@ const Showcase: FC<ShowcaseProps> = ({ title, projects }) => {
                                         src={`/icons/${tool.img}.svg`}
                                         width={50}
                                         alt={tool.name}
+                                        className="mx-auto invert dark:filter-none"
                                     />
                                 </Tooltip>
                             </li>
