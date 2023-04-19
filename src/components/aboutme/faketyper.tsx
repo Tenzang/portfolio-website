@@ -1,5 +1,5 @@
 import { CodeBlock, hybrid, paraisoLight } from 'react-code-blocks';
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import { FC } from '../../util';
 
@@ -9,6 +9,7 @@ interface FakeTyperProps {
 
 const FakeTyper: FC<FakeTyperProps> = ({ code }) => {
     const [charCount, setCharCount] = useState(0);
+    const [lightMode, setLightMode] = useState(false);
     const introText = `// Start Typing...\n`;
     const codeDisplayed = useMemo(
         () => introText + code.slice(0, charCount),
@@ -19,7 +20,9 @@ const FakeTyper: FC<FakeTyperProps> = ({ code }) => {
         setCharCount(charCount + 1);
     };
 
-    const lightMode = matchMedia('(prefers-color-scheme: light)').matches;
+    useEffect(() => {
+        setLightMode(matchMedia('(prefers-color-scheme: light)').matches);
+    });
 
     return (
         <div tabIndex={0} onKeyDown={_fakeType} className="my-4 hidden sm:block">
