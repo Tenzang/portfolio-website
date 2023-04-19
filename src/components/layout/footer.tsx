@@ -4,7 +4,6 @@ import { FC } from '../../util';
 import { Link } from 'gatsby';
 
 const Footer: FC = () => {
-    const RADIUS = '30px';
     return (
         <footer className="p-1 rounded-t-3xl text-center bg-light-secondary dark:bg-dark-secondary">
             Built with{' '}
