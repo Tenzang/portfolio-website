@@ -1,19 +1,14 @@
-import { Tooltip, withStyles } from '@material-ui/core';
 import React, { FC } from 'react';
-import { Project } from '../../hooks/useSiteMetadata';
 import { Link } from 'gatsby';
+import { Tooltip } from 'react-tooltip';
+import { Project } from '../../hooks/useSiteMetadata';
+
+import 'react-tooltip/dist/react-tooltip.css';
 
 interface ShowcaseProps {
     title: string;
     projects: Project[];
 }
-
-const HTMLTooltip = withStyles(() => ({
-    tooltip: {
-        backgroundColor: 'background.paper',
-        maxWidth: '700px'
-    }
-}))(Tooltip);
 
 const Showcase: FC<ShowcaseProps> = ({ title, projects }) => {
     return (
@@ -30,37 +25,37 @@ const Showcase: FC<ShowcaseProps> = ({ title, projects }) => {
                     <ul className="flex justify-center my-10" aria-label="tools used">
                         {project.tools.map((tool) => (
                             <li className="mx-4" key={tool.name}>
-                                <Tooltip title={tool.name}>
-                                    <img
-                                        src={`/icons/${tool.img}.svg`}
-                                        width={50}
-                                        alt={tool.name}
-                                        className="mx-auto invert dark:filter-none"
-                                    />
-                                </Tooltip>
+                                <img
+                                    src={`/icons/${tool.img}.svg`}
+                                    width={50}
+                                    alt={tool.name}
+                                    data-tooltip-id={tool.name}
+                                    data-tooltip-content={tool.name}
+                                    className="mx-auto invert dark:filter-none"
+                                />
+                                <Tooltip id={tool.name} />
                             </li>
                         ))}
                     </ul>
-                    <HTMLTooltip
-                        title={project.description.split('\n').map((par, i) => (
-                            <p className="text-lg" key={i}>
-                                {par}
-                            </p>
-                        ))}
-                        placement="top"
+                    <Link
+                        to={project.url}
+                        target="_blank"
+                        data-tooltip-id={project.img}
+                        data-tooltip-html={project.description.split('.').join('.<br />')}
+                        data-tooltip-place="bottom"
+                        data-tooltip-offset={-200}
                     >
-                        <Link to={project.url} target="_blank">
-                            <img
-                                src={`/images/${project.img}.webp`}
-                                alt={`image of ${project.name}`}
-                                style={{
-                                    width: '80%'
-                                }}
-                                loading="lazy"
-                                className="mx-auto rounded-2xl drop-shadow-light dark:drop-shadow-dark"
-                            />
-                        </Link>
-                    </HTMLTooltip>
+                        <img
+                            src={`/images/${project.img}.webp`}
+                            alt={`image of ${project.name}`}
+                            style={{
+                                width: '80%'
+                            }}
+                            loading="lazy"
+                            className="mx-auto rounded-2xl drop-shadow-light dark:drop-shadow-dark"
+                        />
+                    </Link>
+                    <Tooltip id={project.img} noArrow className="max-w-sm sm:max-w-xl text-2xl" />
                 </article>
             ))}
         </div>
