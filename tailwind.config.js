@@ -15,7 +15,8 @@ module.exports = {
                 light: '0 0 15px black',
                 dark: '0 0 5px white'
             }
-        }
+        },
+        darkMode: 'class'
     },
     plugins: []
 };

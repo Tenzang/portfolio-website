@@ -45,7 +45,8 @@ const SEO: FC<SEOProps> = (props) => {
     return (
         <Helmet
             htmlAttributes={{
-                lang: props.lang || 'en'
+                lang: props.lang || 'en',
+                class: 'dark'
             }}
             title={props.title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
