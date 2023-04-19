@@ -1,14 +1,14 @@
 import React from 'react';
 
 import MetaLayout from './meta-layout';
-import { FCR } from '../../util';
+import { FC } from '../../util';
 import SEO from '../seo/seo';
 
-const Layout: FCR = (props) => {
+const Layout: FC = ({ children }) => {
     return (
         <>
             <SEO title="Loden Gendun"></SEO>
-            <MetaLayout>{props.children}</MetaLayout>
+            <MetaLayout>{children}</MetaLayout>
         </>
     );
 };
