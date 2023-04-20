@@ -1,9 +1,7 @@
 import React from 'react';
-
-import { FC } from '../../util';
 import { Link } from 'gatsby';
 
-const Footer: FC = () => {
+export default () => {
     return (
         <footer className="p-1 rounded-t-3xl text-center bg-light-secondary dark:bg-dark-secondary">
             Built with{' '}
@@ -22,5 +20,3 @@ const Footer: FC = () => {
         </footer>
     );
 };
-
-export default Footer;

@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { FC } from '../../util';
-
 interface LinkType {
     name: string;
     url: string;
     target?: string;
 }
 
-export const Navbar: FC = () => {
+export default () => {
     const links: LinkType[] = [
         {
             name: 'About',

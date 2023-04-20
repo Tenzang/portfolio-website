@@ -1,10 +1,11 @@
-import React from 'react';
-import Header from './header';
-import Footer from './footer';
+import React, { ReactChildren } from 'react';
+import { Header, Footer } from '.';
 
-import type { FC } from '../../util';
+interface LayoutProps {
+    children: ReactChildren;
+}
 
-const Layout: FC = ({ children }) => {
+export default ({ children }: LayoutProps) => {
     return (
         <>
             <Header />
@@ -19,5 +20,3 @@ const Layout: FC = ({ children }) => {
         </>
     );
 };
-
-export default Layout;

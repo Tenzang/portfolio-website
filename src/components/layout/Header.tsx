@@ -1,12 +1,10 @@
 import React from 'react';
-import { Navbar } from './navbar';
-import ContentSkipper from '../contentskipper';
-
-import { FC } from '../../util';
-import Floater from '../floater/floater';
+import { Navbar } from '.';
+import ContentSkipper from '../ContentSkipper';
+import Floater from '../Floater';
 import useSiteMetadata from '../../hooks/useSiteMetadata';
 
-const Header: FC = () => {
+export default () => {
     const { social } = useSiteMetadata();
 
     return (
@@ -21,5 +19,3 @@ const Header: FC = () => {
         </header>
     );
 };
-
-export default Header;
