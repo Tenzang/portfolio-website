@@ -13,8 +13,8 @@ const Contact: FC<ContactProps> = ({ social }) => {
         <div className="text-center flex flex-col gap-6">
             <p>You can find me at:</p>
             <ul aria-label="Social links" className="flex justify-center gap-10">
-                {social.map((icon) => (
-                    <li>
+                {social.map((icon, i) => (
+                    <li key={i}>
                         <Link to={icon.url} target="_blank" key={icon.name}>
                             <img
                                 src={`/icons/${icon.img}.svg`}

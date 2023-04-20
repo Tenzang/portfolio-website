@@ -14,8 +14,8 @@ const Skills: FC<SkillsProps> = ({ languages }) => {
 
     return (
         <div className="divide-y-2 divide-dotted divide-light-highlight/20 dark:divide-dark-highlight/20">
-            {languages.map((language) => (
-                <section className="py-10">
+            {languages.map((language, i) => (
+                <section key={i} className="py-10">
                     <header className="flex justify-center space-x-4">
                         {language.img && (
                             <img

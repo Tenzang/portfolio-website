@@ -40,9 +40,12 @@ export const Navbar: FC = () => {
             aria-label="Navigation Menu"
         >
             <ul className="flex justify-evenly" aria-label="Page Sections">
-                {links.map((link) => {
+                {links.map((link, i) => {
                     return (
-                        <li className="flex flex-auto bg-light-secondary hover:bg-light-highlight dark:hover:bg-dark-highlight sm:bg-transparent first:rounded-tl-2xl last:rounded-tr-2xl">
+                        <li
+                            key={i}
+                            className="flex flex-auto bg-light-secondary hover:bg-light-highlight dark:hover:bg-dark-highlight sm:bg-transparent first:rounded-tl-2xl last:rounded-tr-2xl"
+                        >
                             <Link
                                 className="text-sm sm:text-lg flex-1 py-2 uppercase  focus-visible:bg-light-highlight dark:focus-visible:bg-dark-highlight hover:text-light-primary focus-visible:text-light-primary dark:hover:text-dark-primary dark:focus-visible:text-dark-primary transition"
                                 to={link.url}

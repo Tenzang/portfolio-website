@@ -42,7 +42,12 @@ const IndexPage = () => {
     ];
 
     return sections.map((section) => (
-        <section aria-labelledby={`${section.id}-section-label`} className="py-10" id={section.id}>
+        <section
+            key={section.id}
+            id={section.id}
+            aria-labelledby={`${section.id}-section-label`}
+            className="py-10"
+        >
             <h3 className="text-center text-3xl" id={`${section.id}-section-label`}>
                 {section.title}
             </h3>
