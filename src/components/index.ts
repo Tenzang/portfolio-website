@@ -1,4 +1,4 @@
-export { default as Seo } from './seo/seo';
+export { default as Head } from './Head';
 export { default as AboutMe } from './aboutme/aboutme';
 export { default as Skills } from './skills/skills';
 export { default as Projects } from './projects/projects';

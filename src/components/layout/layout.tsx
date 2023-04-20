@@ -1,14 +1,21 @@
 import React from 'react';
+import Header from './header';
+import Footer from './footer';
 
-import MetaLayout from './meta-layout';
-import { FC } from '../../util';
-import SEO from '../seo/seo';
+import type { FC } from '../../util';
 
 const Layout: FC = ({ children }) => {
     return (
         <>
-            <SEO title="Loden Gendun"></SEO>
-            <MetaLayout>{children}</MetaLayout>
+            <Header />
+            <main
+                id="main"
+                tabIndex={-1}
+                className="font-Montserrat divide-y-2 divide-light-highlight/10 dark:divide-dark-highlight/10"
+            >
+                {children}
+            </main>
+            <Footer />
         </>
     );
 };
