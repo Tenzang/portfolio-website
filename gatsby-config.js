@@ -13,6 +13,7 @@ const frameworks = ['Rails', 'Sinatra', 'React', 'Vue', 'Gatsby', 'Node.js', 'Ex
 module.exports = {
     siteMetadata: {
         title: 'Portfolio',
+        description: 'Loden Genduns portfolio website',
         author: {
             name: `Loden Gendun`,
             about: `Hi! Here's my journey so far...\nI've been working in the retail industry for the past five years while studying Human Biology at Macquarie University. However, after deciding my chosen career path did not align with my goals, I decided to change gears and pursue software engineering.\n In early 2022, I completed a software engineering immersive program and was offered a role as Instructional Associate due to my performance and tendency to support my peers. I've been continuing to learn and develop in my field through online courses, contract work & side projects.\n Now, I'm seeking a new opportunity to join a growth-oriented team who I can share with my passion for coding.`,
